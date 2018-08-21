@@ -10,8 +10,8 @@ httpClient:
   timeout: 15000ms
   connectionTimeout: 15000ms
   userAgent: CXS (cxs)
-  basicAuthUsername: user                   # username for basic auth
-  basicAuthPassword: pass                   # password for basic auth
+  basicAuthUsername: <basic auth username>  # username for basic auth
+  basicAuthPassword: <basic auth password>  # password for basic auth
   proxy:
     host: <proxy host>                      # the host for your proxy
     port: <proxy port>                      # the port for your proxy
