@@ -1,0 +1,26 @@
+server:
+  type: simple
+  connector:
+    type: http
+    port: 8080                              # local port CXS listens on
+  rootPath: /rest/*
+  applicationContextPath: /
+
+httpClient:
+  timeout: 15000ms
+  connectionTimeout: 15000ms
+  userAgent: CXS (cxs)
+
+assets:
+  overrides:
+    /: /users/me/pf-client-xxx              # path to the git workspace containing style assets
+
+workspace:
+  path: /users/me/pf-client-xxx             # path to the git workspace containing style assets
+  xslDir: xsl
+  cssUriPrefix: /css/
+  cssSelectorPrefix: .cxs-style-root
+
+xmlCache:
+  refreshSeconds: 300
+  maximumSize: 104857600

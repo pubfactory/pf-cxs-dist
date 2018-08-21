@@ -1,0 +1,34 @@
+server:
+  type: simple
+  connector:
+    type: http
+    port: 8080                              # local port CXS listens on
+  rootPath: /rest/*
+  applicationContextPath: /
+
+httpClient:
+  timeout: 15000ms
+  connectionTimeout: 15000ms
+  userAgent: CXS (cxs)
+  basicAuthUsername: user                   # username for basic auth
+  basicAuthPassword: pass                   # password for basic auth
+  proxy:
+    host: <proxy host>                      # the host for your proxy
+    port: <proxy port>                      # the port for your proxy
+    auth:
+      username: <proxy username>            # the username for your proxy
+      password: <proxy password>            # the password for your proxy
+
+assets:
+  overrides:
+    /: <git repo location>                  # path to the git workspace containing style assets
+
+workspace:
+  path: <git repo location>                 # path to the git workspace containing style assets
+  xslDir: xsl
+  cssUriPrefix: /css/
+  cssSelectorPrefix: .cxs-style-root
+
+xmlCache:
+  refreshSeconds: 300
+  maximumSize: 104857600
